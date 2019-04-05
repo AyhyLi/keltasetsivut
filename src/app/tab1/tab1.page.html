@@ -1,41 +1,55 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      Keltaiset sivut
     </ion-title>
+    <ion-button slot="start" (click)="pikahaku()">
+      Pikahaku
+    </ion-button>
+    <ion-buttons slot="end" (click)="info()">
+      <ion-button slot="icon-only">
+        <ion-icon name="help"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content padding>
+    <ion-item>
+      <ion-label position="floating">Hakusana</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Toimiala</ion-label>
+      <ion-select placeholder="Valitse yksi" cancelText="Peruuta" okText="Valitse">
+        <ion-select-option>Autokorjaamo</ion-select-option>
+        <ion-select-option>Kahvila ja konditoria</ion-select-option>
+        <ion-select-option>Kuvasliike</ion-select-option>
+        <ion-select-option>LVI-asennus</ion-select-option>
+        <ion-select-option>Matkatoimisto</ion-select-option>
+        <ion-select-option>Nuorisopalvelut</ion-select-option>
+        <ion-select-option>Pankki konttori</ion-select-option>
+        <ion-select-option>Parturi/kampaamo</ion-select-option>
+        <ion-select-option>Ravintola ja ruokailu</ion-select-option>
+        <ion-select-option>Sesonki- ja pop-up myymälät</ion-select-option>
+        <ion-select-option>Terveys, hyvinvointi ja Life-style</ion-select-option>
+        <ion-select-option>Vaatetus</ion-select-option>
+        <ion-select-option>Vakuutusyhtiö</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Kaupunki</ion-label>
+      <ion-select placeholder="Valitse kaupunki" cancelText="Peruuta" okText="Valitse">
+        <ion-select-option *ngFor="let kunta of paikkakunta">
+          {{kunta.nimi_fi}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" margin-top>
+      Hae
+    </ion-button>
+
+    <ion-button expand="block" margin-top>
+      Hae läheltä
+    </ion-button>
 </ion-content>

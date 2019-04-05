@@ -1,5 +1,7 @@
 {
   "name": "keltaisetsivut",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
