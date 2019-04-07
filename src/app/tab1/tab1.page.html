@@ -17,11 +17,16 @@
 <ion-content padding>
     <ion-item>
       <ion-label position="floating">Hakusana</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="valittuHakusana"></ion-input>
     </ion-item>
+
     <ion-item>
       <ion-label>Toimiala</ion-label>
-      <ion-select placeholder="Valitse yksi" cancelText="Peruuta" okText="Valitse">
+      <ion-select [(ngModel)]="valittuToimiala" placeholder="Valitse yksi" cancelText="Peruuta" okText="Valitse">
+
+        <!--<ion-select [(ngModel)]="valittuToimiala"> -->
+        <ion-select-option></ion-select-option>
+        <ion-select-option>Sähkö</ion-select-option>
         <ion-select-option>Autokorjaamo</ion-select-option>
         <ion-select-option>Kahvila ja konditoria</ion-select-option>
         <ion-select-option>Kuvasliike</ion-select-option>
@@ -39,17 +44,35 @@
     </ion-item>
     <ion-item>
       <ion-label>Kaupunki</ion-label>
-      <ion-select placeholder="Valitse kaupunki" cancelText="Peruuta" okText="Valitse">
+      <ion-select [(ngModel)]="valittuToimipaikka" placeholder="Valitse kaupunki" cancelText="Peruuta" okText="Valitse">
         <ion-select-option *ngFor="let kunta of paikkakunta">
           {{kunta.nimi_fi}}
         </ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-button expand="block" margin-top>
+    <ion-button (click)="kokoaKysely()" expand="block" margin-top>
       Hae
     </ion-button>
-
+  
     <ion-button expand="block" margin-top>
       Hae läheltä
     </ion-button>
+
+    <ion-card *ngIf="sovellus.hakutulos!">
+      <ion-card-header>
+        
+      </ion-card-header>
+      <ion-card-content *ngFor="let tulo of sovellus.hakutulos">            
+        
+        {{ tulo.Id }}
+        {{ tulo.Yrityksen_nimi }}
+        {{ tulo.Kayntiosoite }}
+        {{ tulo.Toimipaikka }}
+        
+      </ion-card-content>
+      </ion-card>
+
+
+
+
 </ion-content>
