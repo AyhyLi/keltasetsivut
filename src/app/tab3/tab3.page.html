@@ -1,9 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content></ion-content>
+<ion-content padding>
+  <div *ngIf="tyhja == true">
+    <ion-text>
+      <h2>Hups!</h2>
+      <p>Onko sivu tyhjä?</p>
+      <p>Valitse <b>lista</b>-sivulta yritys ja kokeile uudelleen!</p>
+    </ion-text>
+  </div>
+</ion-content>

@@ -3,6 +3,17 @@
 
 /** Ionic CSS Variables **/
 :root {
+  .lohko{
+    background-image:url('http://www.aurajoki.fi/images/ylabannerit/yritys.jpg');
+    background-size: 100%;
+  }
+
+  .lohko ion-card-header, .lohko ion-card-content{
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    font-weight: bold;
+  }
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;

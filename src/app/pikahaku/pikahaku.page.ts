@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pikahaku',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PikahakuPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl : ModalController) { }
 
   ngOnInit() {
   }
 
+  sulje = () =>{
+    this.modalCtrl.dismiss();
+  }
 }

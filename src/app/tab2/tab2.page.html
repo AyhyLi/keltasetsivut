@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Listaus hakutuloksista
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card class="lohko" (click)="avaa(data)">
+    <ion-card-header>
+      <ion-card-title>
+        Yrityksen nimi
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Kuvaus yrityksestä ja toimialasta
+    </ion-card-content>
+  </ion-card>
+</ion-content>

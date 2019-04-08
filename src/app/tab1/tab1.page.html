@@ -23,7 +23,6 @@
     <ion-item>
       <ion-label>Toimiala</ion-label>
       <ion-select [(ngModel)]="valittuToimiala" placeholder="Valitse yksi" cancelText="Peruuta" okText="Valitse">
-
         <!--<ion-select [(ngModel)]="valittuToimiala"> -->
         <ion-select-option></ion-select-option>
         <ion-select-option>Sähkö</ion-select-option>
@@ -42,6 +41,7 @@
         <ion-select-option>Vakuutusyhtiö</ion-select-option>
       </ion-select>
     </ion-item>
+
     <ion-item>
       <ion-label>Kaupunki</ion-label>
       <ion-select [(ngModel)]="valittuToimipaikka" placeholder="Valitse kaupunki" cancelText="Peruuta" okText="Valitse">
@@ -71,8 +71,5 @@
         
       </ion-card-content>
       </ion-card>
-
-
-
 
 </ion-content>
