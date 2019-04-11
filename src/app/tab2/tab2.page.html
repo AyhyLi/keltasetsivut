@@ -8,10 +8,10 @@
 
 <ion-content>
     
-  <ion-card  *ngFor="let tulo of sovellus.hakutulos" class="lohko" (click)="avaa(tulo)">
+  <ion-card *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count" class="lohko" (click)="avaa(tulo)">
     <ion-card-header>
       <ion-card-title>       
-        {{ tulo.Yrityksen_nimi }}      
+          <small>({{i+1}}/{{c}})</small> {{ tulo.Yrityksen_nimi }}      
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>

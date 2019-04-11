@@ -57,6 +57,25 @@
       Hae läheltä
     </ion-button>
 
+    <ion-item>
+        <ion-label>Hakutulokset max</ion-label>
+        <ion-select [(ngModel)]="valittuMaara" placeholder="Valitse yksi" cancelText="Peruuta" okText="Valitse">
+          <ion-select-option>10</ion-select-option>
+          <ion-select-option>20</ion-select-option>
+          <ion-select-option>40</ion-select-option>
+          <ion-select-option>80</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Esitysjärjestys</ion-label>
+          <ion-select [(ngModel)]="valittuJarjestys" placeholder="Valitse yksi" cancelText="Peruuta" okText="Valitse">
+            <ion-select-option>Nousevasti</ion-select-option>
+            <ion-select-option>Laskevasti</ion-select-option>
+            
+          </ion-select>
+        </ion-item>
+ 
     <!--
 
     <ion-card *ngIf="sovellus.hakutulos!">

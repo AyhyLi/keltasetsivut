@@ -14,18 +14,16 @@ export class SovellusService {
    hakutulos : string[];
    valittuKohde : string[];
    tyhja2 : boolean = true;
-   virhe : string = "";
+  
 
  lahetaKysely = (uusiKysely) : void => {
-  //this.virhe = "HEllo";
+  
     this.http.put(this.url, uusiKysely).subscribe((data : any) => {
-
-     // this.virhe += "222 heee 22";
 
       console.log(uusiKysely);
       
       this.hakutulos = data;
-      //this.valittuKohde = data;
+     
       
     });
 

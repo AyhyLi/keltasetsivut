@@ -10,17 +10,17 @@
 <div *ngIf="sovellus.tyhja2 == false">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Yrityksen tiedot:
-        <ion-input [(ngModel)]="sovellus.valittuKohde.Yrityksen_nimi" type="text"></ion-input>
+      <ion-card-title>Yrityksen tiedot:<br>
+        {{ sovellus.valittuKohde.Yrityksen_nimi }}
       </ion-card-title>
 
     </ion-card-header>
     <ion-card-content>
-      <ion-input [(ngModel)]="sovellus.valittuKohde.Id" type="text"></ion-input>
-      <ion-input [(ngModel)]="sovellus.valittuKohde.Kayntiosoite" type="text"></ion-input>
-      <ion-input [(ngModel)]="sovellus.valittuKohde.Toimipaikka" type="text"></ion-input>
-      <ion-input [(ngModel)]="sovellus.valittuKohde.Puhelin" type="text"></ion-input>
-      <ion-input [(ngModel)]="sovellus.valittuKohde.Tuotteet" type="text"></ion-input>
+        
+      <h2>{{ sovellus.valittuKohde.Kayntiosoite }}</h2><br>
+      <h2>{{ sovellus.valittuKohde.Toimipaikka }}</h2><br>
+      <h2>{{ sovellus.valittuKohde.Puhelin }}</h2><br>
+      <h2>{{ sovellus.valittuKohde.Tuotteet }}</h2><br>
       
 
      <a><p (click)="avaaLinkki('http://' + sovellus.valittuKohde.Linkki)">http://yrityshakemisto.mikseimikkeli.fi</p></a>

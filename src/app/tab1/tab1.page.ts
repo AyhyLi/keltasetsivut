@@ -19,6 +19,8 @@ export class Tab1Page {
   valittuHakusana : string = "";
   valittuToimiala : string = "";
   valittuToimipaikka : string = "";
+  valittuMaara : string = "20";
+  valittuJarjestys : string = "Nousevasti";
 
   constructor(private alertCtrl : AlertController,
               private modalCtrl : ModalController,
@@ -40,15 +42,17 @@ export class Tab1Page {
       tuotteet: this.valittuToimiala,
       toimipaikka: this.valittuToimipaikka,
       haunKohde: 'Yrityksen_nimi',
-      haunMaara: '10',
-      jarjestys: 'Nousevasti', //'Laskevasti',
+      haunMaara: this.valittuMaara,
+      jarjestys: this.valittuJarjestys,
       tunnus: 'lts' 
     }
 
     this.sovellus.lahetaKysely(uusiKysely);
    
+    
     this.router.navigateByUrl(`/tabs/tab2`);
-   
+    
+    
     console.log(this.sovellus.hakutulos);
   }
 
