@@ -4,6 +4,8 @@ import { AlertController, ModalController, MenuController } from '@ionic/angular
 import { SovellusService } from '../sovellus.service';
 import { Kysely } from '../Kysely'
 import { PikahakuPage } from '../pikahaku/pikahaku.page';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tab1',
@@ -20,7 +22,9 @@ export class Tab1Page {
 
   constructor(private alertCtrl : AlertController,
               private modalCtrl : ModalController,
-              private sovellus : SovellusService)
+              private sovellus : SovellusService,
+              private router : Router
+              )
               {
     this.paikkakunta = paikkakunnat;
               }
@@ -42,7 +46,9 @@ export class Tab1Page {
     }
 
     this.sovellus.lahetaKysely(uusiKysely);
-
+   
+    this.router.navigateByUrl(`/tabs/tab2`);
+   
     console.log(this.sovellus.hakutulos);
   }
 

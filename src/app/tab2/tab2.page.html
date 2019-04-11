@@ -7,14 +7,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="lohko" (click)="avaa(data)">
+    
+  <ion-card  *ngFor="let tulo of sovellus.hakutulos" class="lohko" (click)="avaa(tulo)">
     <ion-card-header>
-      <ion-card-title>
-        Yrityksen nimi
+      <ion-card-title>       
+        {{ tulo.Yrityksen_nimi }}      
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Kuvaus yrityksestä ja toimialasta
+      {{ tulo.Tuotteet }}
     </ion-card-content>
   </ion-card>
 </ion-content>
