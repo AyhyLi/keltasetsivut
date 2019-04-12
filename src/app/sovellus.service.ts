@@ -9,7 +9,7 @@ export class SovellusService {
   constructor(private http : HttpClient) { }
 
    //url : string = "http://localhost:3008/haku";
-   url : string = "//192.168.1.4:3008/haku";
+    url : string = "//192.168.1.106:3008/haku";
 
    hakutulos : string[];
    valittuKohde : string[];

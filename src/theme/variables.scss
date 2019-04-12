@@ -3,6 +3,47 @@
 
 /** Ionic CSS Variables **/
 :root {
+  /*ion-app{
+    background-image: url("../assets/kuvat/paperiTekstuuri.jpg");
+    background-repeat: repeat;
+    background-size:30%;
+  }*/
+
+  //Taustaväri
+  --ion-background-color: #fbdb97;
+
+  //Toolbar
+  --ion-toolbar-background:#ffd900;
+  --ion-toolbar-color:#000;
+  --ion-toolbar-border-color:#000;
+
+  ion-toolbar ion-title{
+    font-size: 150%;
+  }
+
+  //Info ruutu
+  .ruutu{
+    --background:#ffd900;
+    
+    button{
+      color:black
+    }
+  }
+
+  //Select
+  ion-select-option{
+    background-color: #000;
+  }
+
+  //Pikahaku napit
+  .pikahaku{
+    --background:#ffd900;
+    --color:#000;
+    --border-color:#000;
+    --color-activated:#FF0;
+  }
+
+  //Yleiset lohko asetukset
   .lohko{
     background-image:url('http://www.aurajoki.fi/images/ylabannerit/yritys.jpg');
     //background-image:url(../app/tab2/yritys_oletuskuva_pieni.jpg);
@@ -13,9 +54,16 @@
     background-color: rgba(255, 255, 255, 0.7);
     color: #000;
     font-weight: bold;
-    //height: 40px;
   }
 
+  //Tabsit 
+  --ion-tab-bar-background: #000;
+  --ion-tab-bar-color:#fff;
+  --ion-tab-bar-color-activated:#ffd900;
+
+
+
+  
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
