@@ -1,5 +1,5 @@
 <ion-content padding>
-  <div *ngIf="sovellus.tyhja2 == true">
+  <div class="virhe" *ngIf="sovellus.tyhja2 == true">
     <ion-text>
       <h2>Hups!</h2>
       <p>Onko sivu tyhjä?</p>
@@ -7,26 +7,29 @@
     </ion-text>
   </div>
 
-<div *ngIf="sovellus.tyhja2 == false">
-  <ion-card>
+  <ion-card *ngIf="sovellus.tyhja2 == false" class="tiedot">
     <ion-card-header>
-      <ion-card-title>Yrityksen tiedot:<br>
+      <ion-card-title>
         {{ sovellus.valittuKohde.Yrityksen_nimi }}
       </ion-card-title>
 
     </ion-card-header>
-    <ion-card-content>
-        
-      <h2>{{ sovellus.valittuKohde.Kayntiosoite }}</h2><br>
-      <h2>{{ sovellus.valittuKohde.Toimipaikka }}</h2><br>
-      <h2>{{ sovellus.valittuKohde.Puhelin }}</h2><br>
-      <h2>{{ sovellus.valittuKohde.Tuotteet }}</h2><br>
+    <ion-card-content margin-top>
       
+      <ion-text>
+        <h2 class="ion-text-center" padding-bottom>{{ sovellus.valittuKohde.Tuotteet }}</h2>
+        <p padding-bottom><ion-icon name="pin"></ion-icon> {{ sovellus.valittuKohde.Kayntiosoite }}</p>
+        <p padding-bottom><ion-icon name="call"></ion-icon> {{ sovellus.valittuKohde.Puhelin }}</p>
+        <ion-icon name="globe" float-left></ion-icon><a><p (click)="avaaLinkki('http://' + sovellus.valittuKohde.Linkki)">http://yrityshakemisto.mikseimikkeli.fi</p></a>
+      </ion-text>
 
-     <a><p (click)="avaaLinkki('http://' + sovellus.valittuKohde.Linkki)">http://yrityshakemisto.mikseimikkeli.fi</p></a>
+      <!--ion-img src="http://www.aurajoki.fi/images/ylabannerit/yritys.jpg"></ion-img-->
       
     </ion-card-content>
+
+    <ion-card-content class="kuva">
+
+    </ion-card-content>
   </ion-card>
-</div>
 
 </ion-content>

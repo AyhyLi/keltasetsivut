@@ -7,8 +7,15 @@
 </ion-header>
 
 <ion-content>
+  <div class="virhe" *ngIf="!sovellus.hakutulos" padding>
+    <ion-text>
+      <h2>Hups!</h2>
+      <p>Onko sivu tyhjä?</p>
+      <p>Hae yritystä tai yrityksiä <b>alku</b>-sivulta ja kokeile uudelleen!</p>
+    </ion-text>
+  </div>
     
-  <ion-card *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count" class="lohko" (click)="avaa(tulo)">
+  <ion-card *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
     <ion-card-header>
       <ion-card-title>       
           <small>({{i+1}}/{{c}})</small> {{ tulo.Yrityksen_nimi }}      
