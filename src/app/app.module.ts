@@ -11,16 +11,20 @@ import { AppComponent } from './app.component';
 import { PikahakuPageModule } from './pikahaku/pikahaku.module';
 import { HttpClientModule } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { PopoverPageModule } from './popover/popover.module';
+import { Camera } from '@ionic-native/camera/ngx';
+
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, PikahakuPageModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, PikahakuPageModule, PopoverPageModule],
   providers: [
     StatusBar,
     SplashScreen,
     InAppBrowser,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

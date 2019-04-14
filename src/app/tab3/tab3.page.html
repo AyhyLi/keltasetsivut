@@ -10,21 +10,26 @@
 <div *ngIf="sovellus.tyhja2 == false">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Yrityksen tiedot:<br>
+      <ion-card-title>Yrityksen tiedot:<br><br>
         {{ sovellus.valittuKohde.Yrityksen_nimi }}
       </ion-card-title>
 
     </ion-card-header>
     <ion-card-content>
-        
+
+        <ion-buttons slot="end">
+              <button style="height: 30px; width: 50px; " size="large" (click)="presentPopover($event, sovellus.valittuKohde.Id, sovellus.valittuKohde.Yrityksen_nimi)"><ion-icon style="height: 20px; width: 30px; " slot="icon-only" name="camera"></ion-icon></button>  
+              <!-- <ion-button (click)="poistoDialogi(tieto.id)"><ion-icon slot="icon-only" name="trash"></ion-icon></ion-button> -->
+          </ion-buttons>
       <h2>{{ sovellus.valittuKohde.Kayntiosoite }}</h2><br>
       <h2>{{ sovellus.valittuKohde.Toimipaikka }}</h2><br>
       <h2>{{ sovellus.valittuKohde.Puhelin }}</h2><br>
       <h2>{{ sovellus.valittuKohde.Tuotteet }}</h2><br>
       
-
+          <img src="{{sovellus.valittuKohde.Kuva}}">
      <a><p (click)="avaaLinkki('http://' + sovellus.valittuKohde.Linkki)">http://yrityshakemisto.mikseimikkeli.fi</p></a>
-      
+     <br><br>
+     <h2>{{ sovellus.virhe }}</h2><br>
     </ion-card-content>
   </ion-card>
 </div>

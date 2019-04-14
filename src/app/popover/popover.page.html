@@ -1,0 +1,27 @@
+<ion-list>
+    <ion-item>
+      <ion-button style="height: 50px; width: 300px;" (click)="sovellus.otaKuva(this.sovellus.kuvattavan_id, this.sovellus.kuvattavan_nimi)">
+        <p>Ota uusi {{ this.sovellus.kuvattavan_id }}kuva</p>
+        <ion-icon style="height: 40px; width: 60px; " slot="icon-only" name="camera">      
+        </ion-icon>
+      </ion-button>
+    </ion-item>
+  
+    <ion-item>
+      <ion-button style="height: 50px; width: 400px;" (click)="sovellus.haeKuva(this.sovellus.kuvattavan_id, this.sovellus.kuvattavan_nimi)">
+        <p>Valitse tallennettu kuva</p>
+        <ion-icon style="height: 40px; width: 60px; " slot="icon-only" name="albums">      
+        </ion-icon>
+      </ion-button>
+    </ion-item>
+    
+    <ion-item>
+        <ion-button style="height: 50px; width: 400px;" (click)="closePopover()">
+          <p>Sulje ikkuna</p>
+          <ion-icon style="height: 40px; width: 60px; " slot="icon-only" name="exit">      
+          </ion-icon>
+        </ion-button>
+      </ion-item>
+  
+  </ion-list>
+  
