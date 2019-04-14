@@ -7,34 +7,19 @@
 </ion-header>
 
 <ion-content>
+    <div class="virhe" *ngIf="!sovellus.hakutulos" padding>
+        <ion-text>
+          <h2>Hups!</h2>
+          <p>Onko sivu tyhjä?</p>
+          <p>Hae yritystä tai yrityksiä <b>alku</b>-sivulta ja kokeile uudelleen!</p>
+        </ion-text>
+      </div>
+
+
   <div *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count">
 
-    <ion-card *ngIf="tulo.OnkoKuva==0 && tulo.Lohkokoko==1" style="background-image:url(../app/tab2/yritys_oletuskuva_pieni.jpg)" class="lohko" (click)="avaa(tulo)">
-      <!-- <ion-card *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count" class="lohko" (click)="avaa(tulo)"> -->
-        <ion-card-header>
-          <ion-card-title>       
-              <small>({{i+1}}/{{c}})</small> {{ tulo.Yrityksen_nimi }}      
-          </ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          {{ tulo.Tuotteet }}
-        </ion-card-content>
-      </ion-card>
-
-
-  <ion-card *ngIf="tulo.OnkoKuva==1 && tulo.Lohkokoko==0" style="background-image:url(../app/tab2/yritys_oletuskuva_pieni.jpg)" class="lohko" (click)="avaa(tulo)">
- 
-    <ion-card-header>
-      <ion-card-title>       
-          <small>({{i+1}}/{{c}})</small> {{ tulo.Yrityksen_nimi }}      
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      {{ tulo.Tuotteet }}
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card *ngIf="tulo.OnkoKuva==1 && tulo.Lohkokoko==1" class="lohko" (click)="avaa(tulo)">
+  
+  <ion-card *ngIf="tulo.OnkoKuva==1" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
     
       <ion-card-header>
           <img src="{{tulo.Kuva}}" style="width: 100%; height: 100px;">
@@ -47,21 +32,8 @@
       </ion-card-content>
     </ion-card>
 
-  <ion-card *ngIf="tulo.OnkoKuva==1 && tulo.Lohkokoko==2" class="lohko" (click)="avaa(tulo)">
-    
-      <ion-card-header>
-          <img src="{{tulo.Kuva}}" style="width: 100%; height: 100px;">
-        <ion-card-title>       
-            <small>({{i+1}}/{{c}})</small> {{ tulo.Yrityksen_nimi }}      
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        {{ tulo.Tuotteet }}
-      </ion-card-content>
-    </ion-card>
-
-  <ion-card *ngIf="tulo.OnkoKuva==0" class="lohko" (click)="avaa(tulo)">
-      <!-- <ion-card *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count" class="lohko" (click)="avaa(tulo)"> -->
+  <ion-card *ngIf="tulo.OnkoKuva==0" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
+     
         <ion-card-header>
           <ion-card-title>       
               <small>({{i+1}}/{{c}})</small> {{ tulo.Yrityksen_nimi }}      

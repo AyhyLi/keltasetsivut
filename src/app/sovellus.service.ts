@@ -60,8 +60,8 @@ export class SovellusService {
     let asetukset : CameraOptions = {
                                       quality : 70,
                                       destinationType : 0,
-                                      targetWidth : 320,
-                                      targetHeight : 220,
+                                      targetWidth : 520, //320,
+                                      targetHeight : 420, //220,
                                       correctOrientation : true,
                                       saveToPhotoAlbum : false //true
     } 
@@ -108,8 +108,8 @@ export class SovellusService {
                                       quality : 70,
                                       destinationType : 0,
                                       sourceType : 0,
-                                      targetWidth : 320,
-                                      targetHeight : 220,
+                                      targetWidth : 520,
+                                      targetHeight : 420,
                                       mediaType : 0,
                                       correctOrientation : true,
                                       saveToPhotoAlbum : false //true
