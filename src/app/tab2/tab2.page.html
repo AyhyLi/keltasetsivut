@@ -19,7 +19,7 @@
   <div *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count">
 
   
-  <ion-card *ngIf="tulo.OnkoKuva==1" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
+  <ion-card *ngIf="tulo.OnkoKuva == 1 && tulo.Lohkokoko != 'pieni'" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
     
       <ion-card-header>
           <img src="{{tulo.Kuva}}" style="width: 100%; height: 100px;">
@@ -32,7 +32,7 @@
       </ion-card-content>
     </ion-card>
 
-  <ion-card *ngIf="tulo.OnkoKuva==0" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
+  <ion-card *ngIf="tulo.OnkoKuva==0 || tulo.Lohkokoko == 'pieni'" class="lohko {{tulo.Lohkokoko}}" (click)="avaa(tulo)">
      
         <ion-card-header>
           <ion-card-title>       

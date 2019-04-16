@@ -3,6 +3,7 @@
 
 /** Ionic CSS Variables **/
 :root {
+  
 
   //Taustaväri
   --ion-background-color: #fbdb97;
@@ -47,32 +48,36 @@
   }*/
 
   .pieni{
-    background-color:#000;
-    height:30%;
+    //background-color:#000;
+    min-height: 100%;
+    max-height: 200px;
   }
 
   .keski{
-    background-image:url('http://www.aurajoki.fi/images/ylabannerit/yritys.jpg');
+    //background-image:url('http://www.aurajoki.fi/images/ylabannerit/yritys.jpg');
     background-size:100%;
     background-position: bottom;
-    height:40%;
+    min-height: 100%;
+    max-height:800px;
   }
 
-  .keski ion-card-content{
+  /*.keski ion-card-content{
     background-color:rgba(0, 0, 0, 0.5);
     height:100%;
+  }*/
+
+  .lohko ion-card-header{
+    border:solid 2px;
+    border-color:#000;
+    background-color:#ffd900;
   }
 
   .lohko ion-card-content{
     color: #FFF;
     font-weight: bold;
     padding-top:5px;
-  }
-
-  .lohko ion-card-header{
-    border:solid 2px;
-    border-color:#000;
-    background-color:#ffd900;
+    //
+    background-color:#000;
   }
 
   //Tabsit 
@@ -117,14 +122,33 @@
     padding:5px;
   }
 
+  //Popover 
+
+  .pop{
+    ion-button{
+      --background:#ffd900;
+      --color:#000;
+    }
+  }
+
   
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary: #000;
+  --ion-color-primary-rgb: 0, 0, 0;;
+  --ion-color-primary-contrast: rgb(255, 216, 0);
+  --ion-color-primary-contrast-rgb: 255, 216, 0;
+  --ion-color-primary-shade: #1e2023;
+  --ion-color-primary-tint: #383a3e;
+
+
+/*primary
+--ion-color-primary: #3880ff;
+--ion-color-primary-rgb: 56, 128, 255;
+--ion-color-primary-contrast: #ffffff;
+--ion-color-primary-contrast-rgb: 255, 255, 255;
+--ion-color-primary-shade: #3171e0;
+--ion-color-primary-tint: #4c8dff;*/
+
 
   /** secondary **/
   --ion-color-secondary: #0cd1e8;

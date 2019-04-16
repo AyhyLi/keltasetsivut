@@ -1,5 +1,5 @@
 export interface Kuvatieto {
-    lohkokoko : number;
+    lohkokoko : string;
     kohde_id : number;
     nimi : string;
     kuva : string;

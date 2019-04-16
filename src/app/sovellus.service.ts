@@ -12,8 +12,8 @@ export class SovellusService {
   constructor(private http : HttpClient, private kamera : Camera) { }
 
    //url : string = "http://localhost:3008/haku";
-    url : string = "//192.168.1.4:3008/haku";
-    urlKuva : string = "//192.168.1.4:3008/kuva";
+    url : string = "//192.168.0.107:3008/haku";
+    urlKuva : string = "//192.168.0.107:3008/kuva";
 
    hakutulos : string[];
    valittuKohde : string[];
@@ -73,7 +73,7 @@ export class SovellusService {
       //this.kuvanNimi = pvm_unix + "PIC";
       
         this.uusi_kuvatiedot = {
-          lohkokoko : 1,
+          lohkokoko : "pieni", //!!!!!EDIT lohoko koko vaihdettu stringiksi ja annettu oletus arvoksi pieni!!!!!
           kohde_id : Number(tietokantaId),
           nimi : yrityksenNimi, // this.valittuKohde.Yrityksen_nimi, //"taustakuva", //this.valittuKohde.Yrityksen_nimi + " ", //"taustakuva",
           kuva : `data:image/jpeg;base64,${kuvadata}`
@@ -97,7 +97,7 @@ export class SovellusService {
 
 
   
-  haeKuva = (tietokantaId : number, yrityksenNimi : string) : void => {
+  haeKuva = (tietokantaId : number, yrityksenNimi : string, lohkokoko : string) : void => {
 
     //let paivays = new Date();
     //let pvm_unix = paivays.getTime();
@@ -121,7 +121,7 @@ export class SovellusService {
       
       //this.uusi_kuvatiedot[11] = {
       this.uusi_kuvatiedot = {
-        lohkokoko : 1,
+        lohkokoko : lohkokoko,
         kohde_id : Number(tietokantaId),
         nimi : yrityksenNimi, //"taustakuviX", //this.valittuKohde.Yrityksen_nimi,  //"taustakuviX",
         kuva : `data:image/jpeg;base64,${kuvadata}`
