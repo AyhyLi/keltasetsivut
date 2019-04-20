@@ -1,3 +1,4 @@
+
 <ion-content padding>
   <div class="virhe" *ngIf="sovellus.tyhja2 == true">
     <ion-text>
@@ -27,7 +28,7 @@
 
       <!--ion-img src="http://www.aurajoki.fi/images/ylabannerit/yritys.jpg"></ion-img-->
 
-      <!-- <ion-img src="{{ sovellus.valittuKohde.Kuva }}"></ion-img> -->
+      <!-- <ion-img *ngIf="sovellus.valittuKohde.Kuva" src="{{ sovellus.valittuKohde.Kuva }}" style="height: 140px;"  (click)="presentPopover($event, sovellus.valittuKohde.Id, sovellus.valittuKohde.Yrityksen_nimi, sovellus.valittuKohde.Lohkoko)"></ion-img> -->
       
     </ion-card-content>
     
@@ -42,9 +43,13 @@
     </ion-card-content>
     
     
-    
-    
 
+
+  </ion-card>
+
+
+  <ion-card *ngIf="sovellus.valittuKohde.Kuva" class="tiedot">
+      <ion-img src="{{ sovellus.valittuKohde.Kuva }}" (click)="presentPopover($event, sovellus.valittuKohde.Id, sovellus.valittuKohde.Yrityksen_nimi, sovellus.valittuKohde.Lohkoko)"></ion-img>
   </ion-card>
 
 </ion-content>
