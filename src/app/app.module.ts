@@ -14,8 +14,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { PopoverPageModule } from './popover/popover.module';
 import { Camera } from '@ionic-native/camera/ngx';
 
-
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

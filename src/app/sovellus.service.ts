@@ -15,8 +15,8 @@ export class SovellusService {
     url : string = "//192.168.0.107:3008/haku";
     urlKuva : string = "//192.168.0.107:3008/kuva";
 
-   hakutulos : string[];
-   valittuKohde : string[];
+   hakutulos = [];
+   valittuKohde = [];
    tyhja2 : boolean = true;
    uusi_kuvatiedot : Kuvatieto;
    kuvattavan_id : number;
@@ -140,8 +140,6 @@ export class SovellusService {
     });
 
   }
-
-
 
 }
 
