@@ -12,7 +12,7 @@ import { PopoverPage } from '../popover/popover.page';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  
+  suunta : any;
   
 
   constructor(private sovellus : SovellusService, private iab: InAppBrowser, private popCTRL: PopoverController){
@@ -41,8 +41,47 @@ export class Tab3Page {
     popover.present();
   }
   
+  pyyhkaisy = (ev :any, id :number)=>{
+    let suunta = null;
+
+    if(ev.direction == 2){
+      //console.log("Vasen");
+      suunta=0;
+    }
+    if(ev.direction == 4){
+      //console.log("Oikea");
+      suunta=1;
+    }
+    //console.log(id);
+    this.suunta = ev.direction;
+
+    this.vaihdaYritys(suunta, id);
+  }
   
-  
+  vaihdaYritys = (suunta:number, id:number)=>{
+    if(suunta !=null){
+      //let tieto;
+
+      for(let i = 0;  i < this.sovellus.hakutulos.length; i++){
+        if(this.sovellus.hakutulos[i].Id == id){
+
+          if(suunta==0 && i <= this.sovellus.hakutulos.length - 2){
+
+            this.sovellus.valittuKohde = this.sovellus.hakutulos[i+1];
+
+            //tieto = this.sovellus.hakutulos[i+1];
+          }
+          if(suunta==1 && i >= 1){
+
+            this.sovellus.valittuKohde = this.sovellus.hakutulos[i-1];
+
+            //tieto = this.sovellus.hakutulos[i-1];
+          }
+        }
+      }
+      //console.log(tieto);
+    }
+  }
 
 
 }

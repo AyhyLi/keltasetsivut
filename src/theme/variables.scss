@@ -90,7 +90,7 @@
     border:solid 2px;
     border-color:#000;
     background-color:#000;
-    height:95%;
+    min-height:95%;
   }
 
   .tiedot ion-card-header{
@@ -129,6 +129,12 @@
       --background:#ffd900;
       --color:#000;
     }
+  }
+
+  //Linkki väri
+
+  a{
+    color: #ffd900;
   }
 
   

@@ -8,7 +8,7 @@
     </ion-text>
   </div>
 
-  <ion-card *ngIf="sovellus.tyhja2 == false" class="tiedot">
+  <ion-card *ngIf="sovellus.tyhja2 == false" class="tiedot" (swipe)="pyyhkaisy($event, sovellus.valittuKohde.Id)">
     <ion-card-header>
       <ion-card-title>
         {{ sovellus.valittuKohde.Yrityksen_nimi }}
@@ -16,8 +16,6 @@
 
     </ion-card-header>
     <ion-card-content margin-top>
-
-      
       
       <ion-text>
         <h2 class="ion-text-center" padding-bottom>{{ sovellus.valittuKohde.Tuotteet }}</h2>
@@ -41,8 +39,6 @@
       </ion-buttons>
       
     </ion-card-content>
-    
-    
 
 
   </ion-card>
