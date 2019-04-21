@@ -64,7 +64,7 @@ export class Tab1Page {
   info = async () : Promise<any> =>{
     const ikkuna = await this.alertCtrl.create({
       header: 'Info',
-      message: 'Valitse hakuusi sopivat määritelmä alla olevista kentistä ja paina hae. Voit myös hakea yrityksiä jotka ovat lähellä sinua painamalla lähellä sinua napilla.',
+      message: 'Valitse hakuusi sopivat määritelmä alla olevista kentistä ja paina hae. Voit myös hakea yrityksiä jotka ovat lähellä sinua painamalla lähellä sinua nappia.',
       cssClass:"ruutu",
       buttons: [
       {

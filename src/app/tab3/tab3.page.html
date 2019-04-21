@@ -23,10 +23,6 @@
         <p padding-bottom><ion-icon name="call"></ion-icon> {{ sovellus.valittuKohde.Puhelin }}</p>
         <ion-icon name="globe" float-left></ion-icon><a><p (click)="avaaLinkki('http://' + sovellus.valittuKohde.Linkki)">http://yrityshakemisto.mikseimikkeli.fi</p></a>
       </ion-text>
-
-      <!--ion-img src="http://www.aurajoki.fi/images/ylabannerit/yritys.jpg"></ion-img-->
-
-      <!-- <ion-img *ngIf="sovellus.valittuKohde.Kuva" src="{{ sovellus.valittuKohde.Kuva }}" style="height: 140px;"  (click)="presentPopover($event, sovellus.valittuKohde.Id, sovellus.valittuKohde.Yrityksen_nimi, sovellus.valittuKohde.Lohkoko)"></ion-img> -->
       
     </ion-card-content>
     
@@ -44,7 +40,7 @@
   </ion-card>
 
 
-  <ion-card *ngIf="sovellus.valittuKohde.Kuva" class="tiedot">
+  <ion-card *ngIf="sovellus.valittuKohde.Kuva" class="tiedotKuva">
       <ion-img src="{{ sovellus.valittuKohde.Kuva }}" (click)="presentPopover($event, sovellus.valittuKohde.Id, sovellus.valittuKohde.Yrityksen_nimi, sovellus.valittuKohde.Lohkoko)"></ion-img>
   </ion-card>
 

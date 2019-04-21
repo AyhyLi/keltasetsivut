@@ -8,7 +8,7 @@
 
 <ion-content>
     
-       <div class="virhe" *ngIf="!sovellus.hakutulos" padding>
+       <div class="virhe" *ngIf="sovellus.hakutulos == ''" padding>
           <ion-text>
               <h2>Hups!</h2>
               <p>Onko sivu tyhjä?</p>
