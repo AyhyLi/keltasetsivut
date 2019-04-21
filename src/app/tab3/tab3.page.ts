@@ -17,7 +17,6 @@ export class Tab3Page {
 
   constructor(private sovellus : SovellusService, private iab: InAppBrowser, private popCTRL: PopoverController){
     
-    //sovellus.tyhja2 = true;
   }
 
   avaaLinkki = (linkki) => {
@@ -52,7 +51,7 @@ export class Tab3Page {
       //console.log("Oikea");
       suunta=1;
     }
-    //console.log(id);
+   
     this.suunta = ev.direction;
 
     this.vaihdaYritys(suunta, id);
@@ -60,8 +59,7 @@ export class Tab3Page {
   
   vaihdaYritys = (suunta:number, id:number)=>{
     if(suunta !=null){
-      //let tieto;
-
+     
       for(let i = 0;  i < this.sovellus.hakutulos.length; i++){
         if(this.sovellus.hakutulos[i].Id == id){
 
@@ -75,11 +73,10 @@ export class Tab3Page {
 
             this.sovellus.valittuKohde = this.sovellus.hakutulos[i-1];
 
-            //tieto = this.sovellus.hakutulos[i-1];
           }
         }
       }
-      //console.log(tieto);
+     
     }
   }
 

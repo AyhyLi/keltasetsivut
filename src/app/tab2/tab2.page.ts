@@ -18,13 +18,9 @@ export class Tab2Page {
 
     this.sovellus.tyhja2 = false;
     this.sovellus.valittuKohde = tiedot;
-    //this.sovellus.kuvattavan_id = tiedot.Id;
-
-    //For lauseke taustakuvalle...
-
+    
     this.router.navigateByUrl(`/tabs/tab3`);
-    console.log(tiedot);
-
+    
   }
 
 

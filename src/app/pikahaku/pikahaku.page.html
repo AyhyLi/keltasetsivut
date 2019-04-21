@@ -5,8 +5,57 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-button class="pikahaku" fill="outline" shape="round">Ravintola</ion-button>
-    <ion-button class="pikahaku" fill="outline" shape="round">Kahvila</ion-button>
-    <ion-button class="pikahaku" fill="outline" shape="round">Kampaamo</ion-button>
-    <ion-button class="pikahaku" fill="outline" shape="round">Autokorjaamo</ion-button>
+
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('ravi')">Ravintola</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kahvi')">Kahvila</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kamp')">Kampaamo</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('taksi')">Taksi</ion-button>
+
+<br><br>
+<p>Aakkosjärjestyksessä:</p>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('asus')">Asuste</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('auto')">Auto</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('eläin')">Eläin</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('fysi')">Fysio</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('hamma')">Hammas</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('hote')">Hotelli</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('huolt')">Huolto</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('huone')">Huonekalu</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('hyvin')">Hyvinvointi</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('jalk')">Jalka</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kahvi')">Kahvila</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kamp')">Kampaamo</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('keit')">Keittiö</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kesä')">Kesä</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kiinte')">Kiinteistö</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kirja')">Kirja</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kodin')">Kodin</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('koul')">Koulu</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kukka')">Kukka</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('kulje')">Kuljetus</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('lahja')">Lahjatavara</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('laki')">Laki</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('liik')">Liikunta</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('luont')">Luontais</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('lääkä')">Lääkäri</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('maino')">Mainonta</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('matka')">Matkailu</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('musi')">Musiikki</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('myy')">Myymälä</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('mökk')">Mökki</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('opti')">Optikko</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('pesu')">Pesu</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('piha')">Pihatavara</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('puutar')">Puutarha</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('rake')">Rakentaminen</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('ravi')">Ravintola</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('ruoka')">Ruoka</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('suunn')">Suunnittelu</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('sähk')">Sähkö</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('taksi')">Taksi</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('terve')">Terveys</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('urhe')">Urheilu</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('valok')">Valokuva</ion-button>
+<ion-button class="pikahaku" fill="outline" shape="round" (click)="kokoaPikaKysely('vähittäiskaup')">Vähittäiskauppa</ion-button>
+
 </ion-content>

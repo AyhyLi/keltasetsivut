@@ -7,14 +7,14 @@
 </ion-header>
 
 <ion-content>
-    <div class="virhe" *ngIf="!sovellus.hakutulos" padding>
-        <ion-text>
-          <h2>Hups!</h2>
-          <p>Onko sivu tyhjä?</p>
-          <p>Hae yritystä tai yrityksiä <b>alku</b>-sivulta ja kokeile uudelleen!</p>
-        </ion-text>
-      </div>
-
+    
+       <div class="virhe" *ngIf="!sovellus.hakutulos" padding>
+          <ion-text>
+              <h2>Hups!</h2>
+              <p>Onko sivu tyhjä?</p>
+              <p>Hae yritystä tai yrityksiä <b>alku</b>-sivulta ja kokeile uudelleen!</p>
+            </ion-text>
+          </div>
 
   <div *ngFor="let tulo of sovellus.hakutulos; let i = index; let c = count">
 

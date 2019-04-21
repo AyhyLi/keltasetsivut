@@ -14,8 +14,6 @@ import { Router } from '@angular/router';
 })
 export class Tab1Page {
   paikkakunta : any;
-  //palautus : string[] = [];
-  //viesti1 : string = "";
   valittuHakusana : string = "";
   valittuToimiala : string = "";
   valittuToimipaikka : string = "";
@@ -48,14 +46,10 @@ export class Tab1Page {
     }
 
     this.sovellus.lahetaKysely(uusiKysely);
-   
     
     this.router.navigateByUrl(`/tabs/tab2`);
-    
-    
-    console.log(this.sovellus.hakutulos);
+   
   }
-
 
   pikahaku = async () : Promise<any> =>{
     const modal = await this.modalCtrl.create({

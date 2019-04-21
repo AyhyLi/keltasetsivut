@@ -31,33 +31,22 @@ export class SovellusService {
   
     this.http.put(this.url, uusiKysely).subscribe((data : any) => {
       this.edellinenKysely = uusiKysely;
-      console.log(uusiKysely);
       
       this.hakutulos = data;
-     
       
     });
-
   }
 
   lahetaKuva = (uusiKysely) : void => {
   
     this.http.put(this.urlKuva, uusiKysely).subscribe((data : any) => {
-
-      console.log(uusiKysely);
-      
+ 
       this.hakutulos = data;
-      
-     
+    
     });
-
   }
 
-
   otaKuva = (tietokantaId : number, yrityksenNimi : string) : void => {
-
-   // let paivays = new Date();
-   // let pvm_unix = paivays.getTime();
 
     let asetukset : CameraOptions = {
                                       quality : 70,
@@ -77,13 +66,10 @@ export class SovellusService {
         this.uusi_kuvatiedot = {
           lohkokoko : "kuva", //  "pieni", //!!!!!EDIT lohoko koko vaihdettu stringiksi ja annettu oletus arvoksi pieni!!!!!
           kohde_id : Number(tietokantaId),
-          nimi : yrityksenNimi, // this.valittuKohde.Yrityksen_nimi, //"taustakuva", //this.valittuKohde.Yrityksen_nimi + " ", //"taustakuva",
+          nimi : yrityksenNimi,
           kuva : `data:image/jpeg;base64,${kuvadata}`
         }
-        //this.virhe = this.uusi_kuvatiedot + " ";
-
-        
-
+       
         this.lahetaKuva(this.uusi_kuvatiedot);
     
 
@@ -91,18 +77,12 @@ export class SovellusService {
 
       this.virhe =  err;//"Kuvaus virhe";
 
-      //this.kuvavirhe[this.kuvanumero] = "Kuvaus keskeytetttiin tai se ei onnistunut."
-
     });
 
   }
 
-
   
   haeKuva = (tietokantaId : number, yrityksenNimi : string, lohkokoko : string) : void => {
-
-    //let paivays = new Date();
-    //let pvm_unix = paivays.getTime();
 
     this.virhe = "Kuvan haku alkaa";
 
@@ -119,13 +99,10 @@ export class SovellusService {
 
     this.kamera.getPicture(asetukset).then((kuvadata) => {
 
-     // this.kuvanNimi = pvm_unix + "PIC";
-      
-      //this.uusi_kuvatiedot[11] = {
       this.uusi_kuvatiedot = {
         lohkokoko : lohkokoko,
         kohde_id : Number(tietokantaId),
-        nimi : yrityksenNimi, //"taustakuviX", //this.valittuKohde.Yrityksen_nimi,  //"taustakuviX",
+        nimi : yrityksenNimi,
         kuva : `data:image/jpeg;base64,${kuvadata}`
       }
 
@@ -135,9 +112,7 @@ export class SovellusService {
 
     }).catch((err) => {
 
-      this.virhe = err;//"Kuvan haku virhe";
-
-      //this.kuvavirhe[this.kuvanumero] = "Kuvaus keskeytetttiin tai se ei onnistunut."
+      this.virhe = err; //"Kuvan haku virhe";
 
     });
 
